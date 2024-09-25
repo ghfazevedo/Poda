@@ -28,7 +28,7 @@ conda install -c conda-forge parallel=v20220722
 ```
 Clone this repository and change permissions for the files in the source folder.
 
-```bash
+```
 git clone https://github.com/GHFAzevedo/Poda
 
 cd Poda
@@ -60,7 +60,7 @@ It requires CIAlign to be installed in your system. Please see https://github.co
 Tumescheit C, Firth AE, Brown K. 2022. CIAlign: A highly customisable command line tool to clean, interpret and visualise multiple sequence alignments. PeerJ 10:e12983 https://doi.org/10.7717/peerj.12983
 
 Usage:
-```bash
+```
 clean_alignments_cialign.sh -I input_folder [-d min_diver -o output_folder -i min_insertion] 
 
       -A input_folder               The folder containing the fasta files 
@@ -102,7 +102,7 @@ It takes as input a folder with alinments. Gene trees will be estimated for each
   
 
 Usage:
-```bash
+```
 remove_paralogs_treeshrink.sh -I folder_with_alignments [-q TreeShrink_q -k TreeShrink_k -s TreeShrink_s  -t n_threads] 
 
       -I folder_with_alignments     The folder containing the aligned 
@@ -131,7 +131,7 @@ It uses [DendroPy](https://dendropy.org/) library. Please Se the [website](https
 
 Usage:
 
-```bash
+```
  find_long_branches.py [-h] -t TREE [-p PERCENT]
 
 Find branches which lenght is bigger than p percentage of total three length.
@@ -150,7 +150,7 @@ optional arguments:
 Iterates over the results of the [remove_paralogs_treeshrink.sh](source/remove_paralogs_treeshrink.sh) using [find_long_branches.py](source/find_long_branches.py) to search for long branches that passed through treeshrink run. Sometimes, when there is an long internal branch, that could indicate a gene duplication, TreeShrink does not remove the taxa. The output list the alignments that need to be checked, so you can decide to remove it or not.
 
 Usage:
-```bash
+```
 screen_for_long_branches.sh folder_with_the_tree_shrink_outputs \
                             folder_with_the_shrunk_alignments
 
