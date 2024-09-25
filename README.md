@@ -1,5 +1,7 @@
 # Poda
- Tools to trim alignments and trees. 
+ Tools to trim alignments and trees.  
+ ![Poda Image](PodaIcon.png)
+ 
 > *Poda* is the portuguese word for trimming branches of a tree
 
 This repository contains scripts and custom programs to search and remove sequences that result in long branches on trees due to bad quality, missing data and/or paralogy. They were used in the following published papers:  
