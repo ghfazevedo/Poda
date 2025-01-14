@@ -66,11 +66,11 @@ Usage:
 clean_alignments_cialign.sh -I input_folder [-d min_diver -o output_folder -i min_insertion] 
 
       -A input_folder               The folder containing the fasta files 
-                                       with aligned sequences.
+                                      with aligned sequences.
       -d min_diver                  The threshold for the
-                                       divergence below which the sequence
-                                       is removed from alignment.
-                                       (Default: 0.65)
+                                      divergence below which the sequence
+                                      is removed from alignment.
+                                      (Default: 0.65)
       -o output_folder              The name of the output folder. 
                                       (Default: input_folder_CIAlign)
       -i min_insertion              Remove insertions which are present in
@@ -88,8 +88,8 @@ clean_alignments_cialign.sh -I input_folder [-d min_diver -o output_folder -i mi
                                       gaps) in an alignment of length 
                                       200b, and 100b in a alignment of 
                                       1000b. (Default:10)
-      -j n_jobs                  Number of jobs to be parallelized.(Default:1)
-                                       Note that j*n should not exceed total cores.	
+      -j n_jobs                     Number of jobs to be parallelized.(Default:1)
+                                    Note that j*n should not exceed total cores.	
       -h                            Print this message and exit.
 ```
 
@@ -112,13 +112,13 @@ remove_paralogs_treeshrink.sh -I folder_with_alignments [-q TreeShrink_q -k Tree
       -q TreeShrink_q               The -q argument for TreeShrink.
                                         Default: 0.05
       -k TreeShrink_k               The -k argument for TreeShrink.
-	                                    Default: none (auto-select).
-	  -s TreeShrink_s       	    The -s argument for TreeShrink.
-	                                    Default: '5,2' 
+                                        Default: none (auto-select).
+      -s TreeShrink_s               The -s argument for TreeShrink.
+                                        Default: '5,2' 
       -t n_threads                  Number of threads to be 
                                        used (Default:12).
-      -j n_jobs               Number of jobs to be parallelized.(Default:1)
-                                 Note that j*n should not exceed total number of cores.
+      -j n_jobs                     Number of jobs to be parallelized.(Default:1)
+                                       Note that j*n should not exceed total number of cores.
       -h                            Print this message and exit.
 ```
 
@@ -134,7 +134,7 @@ It uses [DendroPy](https://dendropy.org/) library. Please Se the [website](https
 Usage:
 
 ```
- find_long_branches.py [-h] -t TREE [-p PERCENT]
+find_long_branches.py [-h] -t TREE [-p PERCENT]
 
 Find branches which lenght is bigger than p percentage of total three length.
 
@@ -142,8 +142,7 @@ required arguments:
   -t TREE, --tree TREE  File with trees
 
 optional arguments:
-  -p PERCENT, --brlen_max_proportion PERCENT
-                        The maximum percentage of total tree length for a branch to be acceptable. Default = 0.5
+  -p PERCENT, --brlen_max_proportion PERCENT  The maximum percentage of total tree length for a branch to be acceptable. Default = 0.5
 ```
 
 
