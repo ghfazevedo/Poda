@@ -132,7 +132,7 @@ for file in $file_list
 	  echo "Cleaning alignment "$file"" >> $logs_path/progress.txt
 	  seq_len=$(bioawk -c fastx '{ print length($seq) }' < $input_folder/$file | head -n 1)
 	  min_length=$(expr $seq_len \* $min_perc_length / 100)
-      sem --id cleaning --jobs $n_jobs /home/azevedo/azevedo/progs/CIAlign/CIAlign/CIAlign.py --infile $input_folder/$file --outfile_stem $output_folder/$file --remove_divergent --remove_divergent_minperc $min_diver --remove_insertions --insertion_min_perc $min_insertion --crop_ends  --crop_divergent --crop_divergent_min_prop_ident 0.95 --crop_divergent_min_prop_nongap 0.95 --remove_short --remove_min_length $min_length --visualise
+      sem --id cleaning --jobs $n_jobs CIAlign --infile $input_folder/$file --outfile_stem $output_folder/$file --remove_divergent --remove_divergent_minperc $min_diver --remove_insertions --insertion_min_perc $min_insertion --crop_ends  --crop_divergent --crop_divergent_min_prop_ident 0.95 --crop_divergent_min_prop_nongap 0.95 --remove_short --remove_min_length $min_length --visualise
     done	  
 sem --wait --id cleaning
   

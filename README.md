@@ -27,6 +27,7 @@ conda install -c bioconda iqtree=2.1.2
 conda install -c smirarab treeshrink=1.3.7
 conda install -c bioconda dendropy=4.5.2
 conda install -c conda-forge parallel=v20220722
+conda install -c bioconda cialign
 ```
 Clone this repository and change permissions for the files in the source folder.
 
